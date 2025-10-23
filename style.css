@@ -1,87 +1,122 @@
+:root {
+    font-size: 16px;
+}
+
 body {
     color: #2e2b26;
-    background-image: url("https://thumbs.dreamstime.com/b/folha-de-papel-velha-38946309.jpg");
-    background-size: cover;
-    background-position: center;
-
     font-family: "Times New Roman", serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+    background-image: url("https://thumbs.dreamstime.com/b/folha-de-papel-velha-38946309.jpg");
+    background-size: cover;
+    /* Garante que a imagem cubra toda a tela */
+    background-attachment: fixed;
+    /* Mantém o fundo fixo ao rolar */
+    background-position: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+
+.container p {
+    font-size: 1.05rem;
+    text-align: justify;
+    margin: 0 0 1.25rem 0;
+}
+
+.container h2 {
+    color: #3c2f1c;
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(46, 43, 38, 0.2);
+}
+
+ol {
+    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+ol li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
 }
 
 .capa {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 60px 20px;
-    background-color: rgba(255, 225, 225, 0.6);
-    width: 70%;
-    margin: 80px auto;
+    width: 90%;
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.75);
     border: 3px solid #8b7d6d;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
 }
 
 .capa h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     color: #3c2f1c;
 }
 
 .capa h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    margin-top: 5px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
     color: #4e3b23;
     font-style: italic;
 }
 
 .capa img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid #3c2f1c;
-    margin: 20px 0;
+    margin: 1.5rem 0;
+    object-fit: cover;
 }
 
-.info p {
-    margin-top: 8px 0;
+
+.info-container {
+    padding: 1rem;
+    width: 100%;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 20px auto;
-    width: 600px;
-    background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
-}
-
-th,
-td {
-    border: 1px solid #ffffff00;
-    padding: 8px 12px;
-    color: rgb(0, 0, 0);
-}
-
-th {
-    background-color: #ffffff00;
-    color: rgb(0, 0, 0);
-    text-align: left;
-}
-
-h1 {
-    color: #000;
+.info-container p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
     text-align: center;
-    margin-top: 40px;
 }
 
-p {
-    line-height: 1.6;
-    font-size: 18px;
-    text-align: justify;
-    margin: 0 60px 20px 60px;
+@media (max-width: 768px) {
+    .capa {
+        margin: 2rem auto;
+        padding: 1.5rem 1rem;
+    }
+
+    .capa h1 {
+        font-size: 2rem;
+    }
+
+    .capa h2 {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 1rem 0;
+    }
 }
